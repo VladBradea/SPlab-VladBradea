@@ -1,6 +1,6 @@
 package com.example.demo.models;
 
-public class Table {
+public class Table implements Element{
     private String title;
 
     public Table() {

@@ -5,9 +5,9 @@ import java.util.List;
 
 public class SubChapter {
     private String name;
-    private List<Image> listOfImages = new ArrayList<>();
-    private List<Paragraph> listOfParagraphs = new ArrayList<>();
-    private List<Table> listOfTables = new ArrayList<>();
+    private final List<Image> listOfImages = new ArrayList<>();
+    private final List<Paragraph> listOfParagraphs = new ArrayList<>();
+    private final List<Table> listOfTables = new ArrayList<>();
 
     public SubChapter () {
         this.name = null;
@@ -15,14 +15,6 @@ public class SubChapter {
 
     public SubChapter(String name) {
         this.name = name;
-    }
-
-    public SubChapter(String name, List<Image> listOfImages, List<Paragraph> listOfParagraphs,
-                      List<Table> listOfTables) {
-        this.name = name;
-        this.listOfImages = listOfImages;
-        this.listOfParagraphs = listOfParagraphs;
-        this.listOfTables = listOfTables;
     }
 
     public void createNewParagraph(String text) {

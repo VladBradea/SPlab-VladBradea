@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Chapter {
     private String name;
-    private List<SubChapter> listOfSubChapters = new ArrayList<>();
+    private final List<SubChapter> listOfSubChapters = new ArrayList<>();
 
     public Chapter () {
         this.name = null;
@@ -13,11 +13,6 @@ public class Chapter {
 
     public Chapter(String name) {
         this.name = name;
-    }
-
-    public Chapter(String name, List<SubChapter> listOfSubChapters) {
-        this.name = name;
-        this.listOfSubChapters = listOfSubChapters;
     }
 
     public int createSubChapter(String name) {

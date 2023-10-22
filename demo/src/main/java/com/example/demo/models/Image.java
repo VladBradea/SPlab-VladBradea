@@ -1,6 +1,6 @@
 package com.example.demo.models;
 
-public class Image {
+public class Image implements Element{
     private String imageName;
 
     public Image() {

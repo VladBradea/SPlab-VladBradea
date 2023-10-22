@@ -6,21 +6,18 @@ import java.util.List;
 public class Book {
     private String title;
     private Author author;
-    private List<Chapter> listOfChapters = new ArrayList<>();
+    private final List<Chapter> listOfChapters = new ArrayList<>();
+    private TableOfContents tableOfContents;
 
     public Book() {
         this.title = null;
         this.author = null;
+        tableOfContents = createTableOfContents();
     }
 
     public Book(String title) {
         this.title = title;
-    }
-
-    public Book(String title, Author author, List<Chapter> listOfChapters) {
-        this.title = title;
-        this.author = author;
-        this.listOfChapters = listOfChapters;
+        tableOfContents = createTableOfContents();
     }
 
     public void addAuthor(Author author) {
@@ -37,13 +34,20 @@ public class Book {
         return this.listOfChapters.get(index);
     }
 
+    public List<Chapter> getListOfChapters() {
+        List<Chapter> chapterList = this.listOfChapters;
+        return chapterList;
+    }
+
+    public TableOfContents createTableOfContents() {
+        return new TableOfContents(this);
+    }
+
     public void print() {
         System.out.println("Book title: " + this.title);
         this.author.print();
-        for(Chapter chapter : this.listOfChapters) {
-            chapter.print();
-        }
     }
+
 
 
 }
