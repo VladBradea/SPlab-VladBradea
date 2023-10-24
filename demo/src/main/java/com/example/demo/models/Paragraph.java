@@ -14,11 +14,6 @@ public class Paragraph implements Element{
     }
 
     @Override
-    public Element clone() {
-        return new Paragraph(this.text);
-    }
-
-    @Override
     public void print() {
         System.out.println("Paragraph: " + this.text);
     }

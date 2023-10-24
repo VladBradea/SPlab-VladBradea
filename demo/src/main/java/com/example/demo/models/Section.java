@@ -36,7 +36,6 @@ public class Section implements Element{
 
     @Override
     public void add(Element element) {
-        Element clonedElement = element.clone();
         this.listOfElements.add(element);
     }
 

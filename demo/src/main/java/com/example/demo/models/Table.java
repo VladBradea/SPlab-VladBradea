@@ -14,11 +14,6 @@ public class Table implements Element{
     }
 
     @Override
-    public Element clone() {
-        return new Table(this.title);
-    }
-
-    @Override
     public void print() {
         System.out.println("Title: " + this.title);
     }

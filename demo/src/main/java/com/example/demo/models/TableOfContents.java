@@ -4,11 +4,6 @@ import java.io.*;
 
 public class TableOfContents implements Element{
     @Override
-    public Element clone() {
-        return new TableOfContents();
-    }
-
-    @Override
     public void print() {
 
     }
