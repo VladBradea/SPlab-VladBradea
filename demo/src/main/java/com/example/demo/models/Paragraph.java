@@ -13,9 +13,19 @@ public class Paragraph implements Element{
         this.text = text;
     }
 
+    public String getTextCopy() {
+        String textCopy;
+        textCopy = this.text;
+        return textCopy;
+    }
+
+    public void setAlignStrategy(AlignStrategy alignStrategy) {
+        this.text = alignStrategy.render(this);
+    }
+
     @Override
     public void print() {
-        System.out.println("Paragraph: " + this.text);
+
     }
 
     @Override
